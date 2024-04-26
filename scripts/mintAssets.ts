@@ -11,7 +11,6 @@ const provider = getDefaultProvider(ImmutableRpcUrl.Testnet);
 
 const mint = async (provider: Provider): Promise<TransactionResponse> => {
   // Bound contract instance
-  console.log('DEBUG', CONTRACT_ADDRESS);
   const contract = new ERC721Client(CONTRACT_ADDRESS!);
   // The wallet of the intended signer of the mint request
   const wallet = new Wallet(PRIVATE_KEY!, provider);
